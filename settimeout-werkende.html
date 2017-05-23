@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: lightgray;
+        }
+        
+        #teller {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #000;
+            text-align: center;
+            margin: auto;
+            font-size: 2.5em;
+            color: aliceblue;
+            
+        }
+        
+        
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div id="teller">
+    <span id="tellers"></span>
+    
+    </div>
+
+    <script>
+        var teller = 0;
+        var interval = setInterval(count, 20);
+
+        function count() {
+            teller = teller + 1;
+            if (teller >= 100) {
+                clearInterval(interval);
+                document.body.style.background = "#000";
+                document.getElementById("teller").style.color = "#4280f4";
+            }
+            document.getElementById("tellers").innerHTML = teller;
+        }
+    </script>
+
+</body>
+
+
+
+</html>
